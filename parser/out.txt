@@ -1,0 +1,1 @@
+(program (programBlocks (classDefine class A { (feature var : Int <- (expression 0)) ; (feature value ( ) : Int { (expression var) }) ; (feature set_var ( (formal num : Int) ) : SELF_TYPE { (expression { (expression var <- (expression num)) ; (expression self) ; }) }) ; }) <missing ';'> (programBlocks <EOF>)))
