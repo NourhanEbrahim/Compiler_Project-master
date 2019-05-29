@@ -1,13 +1,13 @@
 class A {
 
-   var : Int <- 0;
+   var : Int <- 0
 
-   value() : Int { var; };
+   value() : Int { var };
 
-   set_var(num : Int) : SELF_TYPE {
+   set_var(num : Int) : VOID {
       {
-         var <- num;
-         self;
+         x <- num;
+         var <- x;
       }
    };
    };
