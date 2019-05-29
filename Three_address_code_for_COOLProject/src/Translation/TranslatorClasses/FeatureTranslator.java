@@ -4,7 +4,6 @@ import Translation.Environment.ScopeHandler;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-
 public class FeatureTranslator extends Translator {
     ParseTree parseTree;
     public FeatureTranslator(ParseTree parsetree) {
@@ -20,23 +19,13 @@ public class FeatureTranslator extends Translator {
 
             ParseTree child = parseTree.getChild(i);
             if (child instanceof COOLParser.DeclContext) {
-
                 String temp = new DeclTranslator(child).generate();
-
-
             }
 
             if (child instanceof COOLParser.FunctionContext) {
-
                 String temp = new FunctionTranslator(child).generate();
-
-
             }
-
-
-
         }
-
         ScopeHandler.popScope();
         return null;
     }
