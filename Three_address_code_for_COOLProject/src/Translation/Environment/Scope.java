@@ -16,6 +16,7 @@ public class Scope {
 
     }
 
+    //push new token into hash table and get it's scope
     void addToken(Token token) {
         if (this.hashtable.containsKey(token.name))
             throw new RuntimeException(
@@ -31,6 +32,7 @@ public class Scope {
     }
 
 
+    // get scope for old token
     Token getToken(String name , int num) {
         System.out.println(String.format("token %s is declared in scope %d",name,num));
         return this.hashtable.get(name);
