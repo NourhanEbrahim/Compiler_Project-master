@@ -6,8 +6,6 @@ import Translation.TranslateAndError.TranslationHandler;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-
-// ID ( formalsList? ) : (ID|type) { expr? } ;
 public class FunctionTranslator extends Translator {
     ParseTree parseTree;
 
@@ -22,24 +20,20 @@ public class FunctionTranslator extends Translator {
         space = "\t\t";
         // create a scope for this function
         ScopeHandler.pushScope();
-
+        
         // generate param list
          param_num=0;
-
         this.generateParam(parseTree);
-
+        
         // set a reference for the function in current scope
        String type = this.generateFeatureLabel(parseTree);
-
 
         // generate feature body
 
         String ret = this.generateFunctionBody(parseTree);
 
         if (ret != null && !(type.contains("VOID"))) {
-
             TranslationHandler.write(String.format("%sreturn %s", space,ret));
-
         }
 
         space ="";
@@ -76,12 +70,9 @@ public class FunctionTranslator extends Translator {
         } else {
             featureType = fun.getChild(4).getText();
         }
-
-
         Token featureRef = new Token(featureName, featureType);
         ScopeHandler.addToken(featureRef);
-
-
+        
         TranslationHandler.write(String.format("%s:", featureRef.name));
 
         return  featureType;
