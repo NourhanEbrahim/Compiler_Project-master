@@ -28,8 +28,27 @@ Each pattern matches a set of strings, so regular expressions serve as names for
 There are a number of algebraic laws that are obeyed by regular expressions, which can be used to manipulate regular expressions into equivalent forms.
 For more info, 
 please check: https://www.tutorialspoint.com/compiler_design/compiler_design_regular_expressions.htm
-### Code:
+### Code Specification:
 1) A program that takes a single command-line argument . That argument will be an ASCII text Cool source file. Your program must either indicate that there is an error in the input (e.g., a malformed string) or emit file.cl-lex.
 2)Test cases good.cl and bad.cl. The first should lex correctly and yield a sequence of tokens. The second should contain an error.
 **good**
 ![goodlexer](https://user-images.githubusercontent.com/38635461/58597314-ab68c500-8277-11e9-8a7a-a9bea0116eac.jpg)
+## 2)Parser
+### Introduction :
+Syntax analyzers follow production rules defined by means of context-free grammar. The way the production rules are implemented (derivation) divides parsing into two types : top-down parsing and bottom-up parsing.
+
+**Top-down Parsing**
+When the parser starts constructing the parse tree from the start symbol and then tries to transform the start symbol to the input, it is called top-down parsing.
+- <b>Recursive descent parsing </b>: It is a common form of top-down parsing. It is called recursive as it uses recursive procedures to process the input. Recursive descent parsing suffers from backtracking.
+- <b>Backtracking </b>: It means, if one derivation of a production fails, the syntax analyzer restarts the process using different rules of same production. This technique may process the input string more than once to determine the right production. 
+
+**Bottom-up Parsing**
+  As the name suggests, bottom-up parsing starts with the input symbols and tries to construct the parse tree up to the start symbol.
+  ###  in our code the parsing type is **Top-down Parsing**
+ ### Code Specification:
+  *  A program that takes a single command-line argument (e.g., file.cl-lex). That argument will be an ASCII text Cool tokens file (as described in the lexer programming assignment). The cl-lex file will always be well-formed (i.e., there will be no syntax errors in the cl-lex file itself).
+  f your program is called parser, invoking parser file.cl-lex should yield the same output as cool --parse file.cl.
+Your program can take another argument which is the file to print the output of the Concrete Syntax Tree (CST) as follows: parser file.cl-lex file.cl-cst.
+  Your program should determine and print any errors in the parsing tree and terminate the program.
+  * Test cases good.cl and bad.cl. The first should parse correctly and yield an abstract syntax tree. The second should contain an error.
+   
