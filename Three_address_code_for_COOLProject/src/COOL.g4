@@ -81,7 +81,6 @@ methodOwnCall
 list
    : list ',' stmt | stmt
    ;
-
 methodCall
    : OBJECTID  '.' methodOwnCall # methodcall
    ;
@@ -291,4 +290,7 @@ ONE_LINE_COMMENT
 // skip spaces, tabs, newlines, note that \v is not suppoted in antlr
 WHITESPACE
    : [ \t\r\n\f] + -> skip
+   ;
+ERORR
+   :.
    ;
