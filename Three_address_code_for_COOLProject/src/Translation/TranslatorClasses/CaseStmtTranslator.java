@@ -18,7 +18,6 @@ public class CaseStmtTranslator extends Translator  {
     }
     @Override
     public String generate() {
-        TranslationHandler.write("");
         TranslationHandler.write(space + "Case :");
         space +="\t\t";
 
@@ -28,11 +27,9 @@ public class CaseStmtTranslator extends Translator  {
         Temp myType = new Temp();
 
         TranslationHandler.write(space + myType.toString() + " = TYPEOF " + Child);
-        //Child.release();
 
         String afterAll = TranslationHandler.getNewLabel();
         for(int i = 3, j = 1 ; i+6 < parseTree.getChildCount() ; i += 6, ++j) {
-            TranslationHandler.write("");
 
             TranslationHandler.write(String.format(space + "Case #%d :", j));
             space +="\t\t";
@@ -48,15 +45,12 @@ public class CaseStmtTranslator extends Translator  {
             String childITemp = new stmtTranslator(parseTree.getChild(i + 4)).generate();
             TranslationHandler.write(space + myRes.toString() + " = " + childITemp);
             TranslationHandler.write(space + "GOTO " + afterAll);
-
-
             space = space.substring(0,space.length()-2);
         }
         TranslationHandler.write("");
         TranslationHandler.write(space + afterAll + ":");
         space +="\t\t";
-
-
+        
         return myRes.toString();
     }
 }
