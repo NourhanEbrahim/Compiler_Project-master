@@ -67,7 +67,6 @@ public class MethodOwnCallTranslator extends Translator {
 
                 String formalsListTemp = new ListTranslator(child).generate();
 
-                //Iterator it = q.iterator();
                 for(int j=0;j<param_num;j++) {
                     TranslationHandler.write(
                             String.format(
