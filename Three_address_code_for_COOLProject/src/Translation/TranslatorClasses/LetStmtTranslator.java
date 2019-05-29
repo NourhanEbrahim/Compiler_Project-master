@@ -15,7 +15,6 @@ public class LetStmtTranslator extends Translator {
     }
 
     @Override
-    // LET decl (',' decl ) * IN expression
     public String generate() {
         String exprString="";
         ScopeHandler.pushScope();
