@@ -29,3 +29,7 @@ There are a number of algebraic laws that are obeyed by regular expressions, whi
 For more info, 
 please check: https://www.tutorialspoint.com/compiler_design/compiler_design_regular_expressions.htm
 ### Code:
+1) A program that takes a single command-line argument . That argument will be an ASCII text Cool source file. Your program must either indicate that there is an error in the input (e.g., a malformed string) or emit file.cl-lex.
+2)Test cases good.cl and bad.cl. The first should lex correctly and yield a sequence of tokens. The second should contain an error.
+**good**
+![goodlexer](https://user-images.githubusercontent.com/38635461/58597314-ab68c500-8277-11e9-8a7a-a9bea0116eac.jpg)
