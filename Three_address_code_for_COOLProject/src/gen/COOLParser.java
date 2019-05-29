@@ -1,15 +1,8 @@
-package gen;// Generated from E:/study/year4/term2/compiler/ppppp/src\COOL.g4 by ANTLR 4.7.2
-
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.ATN;
-import org.antlr.v4.runtime.atn.ATNDeserializer;
-import org.antlr.v4.runtime.atn.ParserATNSimulator;
-import org.antlr.v4.runtime.atn.PredictionContextCache;
+package gen;// Generated from /home/nourhan/nourhan/projects (1)/src/COOL.g4 by ANTLR 4.7.2
+import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
-import org.antlr.v4.runtime.tree.ParseTreeVisitor;
-import org.antlr.v4.runtime.tree.TerminalNode;
-
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.*;
 import java.util.List;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
@@ -26,7 +19,8 @@ public class COOLParser extends Parser {
 		OF=26, NOT=27, TRUE=28, STRING=29, INT=30, TYPEID=31, OBJECTID=32, ASSIGNMENT=33, 
 		CASE_ARROW=34, ADD=35, MINUS=36, MULTIPLY=37, DIVISION=38, LESS_THAN=39, 
 		LESS_EQUAL=40, EQUAL=41, INTEGER_NEGATIVE=42, ESC=43, UNICODE=44, HEX=45, 
-		OPEN_COMMENT=46, CLOSE_COMMENT=47, COMMENT=48, ONE_LINE_COMMENT=49, WHITESPACE=50;
+		OPEN_COMMENT=46, CLOSE_COMMENT=47, COMMENT=48, ONE_LINE_COMMENT=49, WHITESPACE=50, 
+		ERORR=51;
 	public static final int
 		RULE_program = 0, RULE_programBlocks = 1, RULE_classDefine = 2, RULE_feature = 3, 
 		RULE_function = 4, RULE_param = 5, RULE_decl = 6, RULE_formal = 7, RULE_stmt = 8, 
@@ -62,7 +56,7 @@ public class COOLParser extends Parser {
 			"STRING", "INT", "TYPEID", "OBJECTID", "ASSIGNMENT", "CASE_ARROW", "ADD", 
 			"MINUS", "MULTIPLY", "DIVISION", "LESS_THAN", "LESS_EQUAL", "EQUAL", 
 			"INTEGER_NEGATIVE", "ESC", "UNICODE", "HEX", "OPEN_COMMENT", "CLOSE_COMMENT", 
-			"COMMENT", "ONE_LINE_COMMENT", "WHITESPACE"
+			"COMMENT", "ONE_LINE_COMMENT", "WHITESPACE", "ERORR"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -126,15 +120,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_program; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterProgram(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterProgram(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitProgram(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitProgram(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitProgram(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitProgram(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -165,7 +159,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_programBlocks; }
-
+	 
 		public ProgramBlocksContext() { }
 		public void copyFrom(ProgramBlocksContext ctx) {
 			super.copyFrom(ctx);
@@ -181,15 +175,15 @@ public class COOLParser extends Parser {
 		public ClassesContext(ProgramBlocksContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterClasses(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterClasses(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitClasses(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitClasses(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitClasses(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitClasses(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -198,15 +192,15 @@ public class COOLParser extends Parser {
 		public EofContext(ProgramBlocksContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterEof(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterEof(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitEof(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitEof(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitEof(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitEof(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -269,15 +263,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classDefine; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterClassDefine(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterClassDefine(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitClassDefine(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitClassDefine(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitClassDefine(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitClassDefine(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -343,15 +337,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_feature; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterFeature(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterFeature(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitFeature(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitFeature(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitFeature(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitFeature(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -409,7 +403,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_function; }
-
+	 
 		public FunctionContext() { }
 		public void copyFrom(FunctionContext ctx) {
 			super.copyFrom(ctx);
@@ -427,15 +421,15 @@ public class COOLParser extends Parser {
 		public MethodContext(FunctionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterMethod(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterMethod(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitMethod(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitMethod(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitMethod(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitMethod(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -502,15 +496,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_param; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterParam(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterParam(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitParam(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitParam(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitParam(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitParam(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -538,7 +532,7 @@ public class COOLParser extends Parser {
 			setState(97);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -553,7 +547,7 @@ public class COOLParser extends Parser {
 					setState(94);
 					formal();
 					}
-					}
+					} 
 				}
 				setState(99);
 				_errHandler.sync(this);
@@ -577,7 +571,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_decl; }
-
+	 
 		public DeclContext() { }
 		public void copyFrom(DeclContext ctx) {
 			super.copyFrom(ctx);
@@ -593,15 +587,15 @@ public class COOLParser extends Parser {
 		public PropertyContext(DeclContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterProperty(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterProperty(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitProperty(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitProperty(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitProperty(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitProperty(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -653,15 +647,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_formal; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterFormal(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterFormal(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitFormal(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitFormal(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitFormal(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitFormal(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -717,15 +711,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterStmt(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterStmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitStmt(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitStmt(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitStmt(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitStmt(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -754,7 +748,7 @@ public class COOLParser extends Parser {
 			setState(120);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,8,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -777,7 +771,7 @@ public class COOLParser extends Parser {
 					setState(117);
 					factor(0);
 					}
-					}
+					} 
 				}
 				setState(122);
 				_errHandler.sync(this);
@@ -811,15 +805,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_factor; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterFactor(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterFactor(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitFactor(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitFactor(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitFactor(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitFactor(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -848,7 +842,7 @@ public class COOLParser extends Parser {
 			setState(131);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,9,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -871,7 +865,7 @@ public class COOLParser extends Parser {
 					setState(128);
 					expression();
 					}
-					}
+					} 
 				}
 				setState(133);
 				_errHandler.sync(this);
@@ -942,15 +936,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterExpression(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitExpression(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitExpression(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1104,15 +1098,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assigmentstmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterAssigmentstmt(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterAssigmentstmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitAssigmentstmt(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitAssigmentstmt(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitAssigmentstmt(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitAssigmentstmt(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1147,7 +1141,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_methodOwnCall; }
-
+	 
 		public MethodOwnCallContext() { }
 		public void copyFrom(MethodOwnCallContext ctx) {
 			super.copyFrom(ctx);
@@ -1161,15 +1155,15 @@ public class COOLParser extends Parser {
 		public OwnMethodCallContext(MethodOwnCallContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterOwnMethodCall(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterOwnMethodCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitOwnMethodCall(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitOwnMethodCall(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitOwnMethodCall(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitOwnMethodCall(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1215,15 +1209,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterList(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitList(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitList(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitList(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitList(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1251,7 +1245,7 @@ public class COOLParser extends Parser {
 			setState(172);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,11,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -1266,7 +1260,7 @@ public class COOLParser extends Parser {
 					setState(169);
 					stmt(0);
 					}
-					}
+					} 
 				}
 				setState(174);
 				_errHandler.sync(this);
@@ -1290,7 +1284,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_methodCall; }
-
+	 
 		public MethodCallContext() { }
 		public void copyFrom(MethodCallContext ctx) {
 			super.copyFrom(ctx);
@@ -1304,15 +1298,15 @@ public class COOLParser extends Parser {
 		public MethodcallContext(MethodCallContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterMethodcall(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterMethodcall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitMethodcall(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitMethodcall(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitMethodcall(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitMethodcall(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1348,7 +1342,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_ifStmt; }
-
+	 
 		public IfStmtContext() { }
 		public void copyFrom(IfStmtContext ctx) {
 			super.copyFrom(ctx);
@@ -1368,15 +1362,15 @@ public class COOLParser extends Parser {
 		public IfContext(IfStmtContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterIf(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitIf(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitIf(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitIf(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitIf(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1429,7 +1423,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_whileStmt; }
-
+	 
 		public WhileStmtContext() { }
 		public void copyFrom(WhileStmtContext ctx) {
 			super.copyFrom(ctx);
@@ -1448,15 +1442,15 @@ public class COOLParser extends Parser {
 		public WhileContext(WhileStmtContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterWhile(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterWhile(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitWhile(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitWhile(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitWhile(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitWhile(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1509,15 +1503,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_letStmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterLetStmt(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterLetStmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitLetStmt(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitLetStmt(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitLetStmt(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitLetStmt(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1579,15 +1573,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_block; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterBlock(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitBlock(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitBlock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitBlock(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitBlock(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1601,7 +1595,7 @@ public class COOLParser extends Parser {
 			{
 			setState(207);
 			match(T__1);
-			setState(211);
+			setState(211); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
@@ -1613,7 +1607,7 @@ public class COOLParser extends Parser {
 				match(T__0);
 				}
 				}
-				setState(213);
+				setState(213); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << SELF) | (1L << FALSE) | (1L << IF) | (1L << ISVOID) | (1L << LET) | (1L << WHILE) | (1L << CASE) | (1L << NOT) | (1L << TRUE) | (1L << STRING) | (1L << INT) | (1L << OBJECTID) | (1L << MINUS) | (1L << INTEGER_NEGATIVE))) != 0) );
@@ -1660,15 +1654,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_caseStmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterCaseStmt(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterCaseStmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitCaseStmt(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitCaseStmt(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitCaseStmt(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitCaseStmt(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1686,7 +1680,7 @@ public class COOLParser extends Parser {
 			stmt(0);
 			setState(219);
 			match(OF);
-			setState(227);
+			setState(227); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
@@ -1706,7 +1700,7 @@ public class COOLParser extends Parser {
 				match(T__0);
 				}
 				}
-				setState(229);
+				setState(229); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==OBJECTID );
@@ -1730,7 +1724,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_negativeExpr; }
-
+	 
 		public NegativeExprContext() { }
 		public void copyFrom(NegativeExprContext ctx) {
 			super.copyFrom(ctx);
@@ -1744,15 +1738,15 @@ public class COOLParser extends Parser {
 		public NegativeContext(NegativeExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterNegative(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterNegative(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitNegative(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitNegative(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitNegative(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitNegative(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1792,15 +1786,15 @@ public class COOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_minusExpr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterMinusExpr(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterMinusExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitMinusExpr(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitMinusExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitMinusExpr(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitMinusExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1833,7 +1827,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_isvoidExpr; }
-
+	 
 		public IsvoidExprContext() { }
 		public void copyFrom(IsvoidExprContext ctx) {
 			super.copyFrom(ctx);
@@ -1847,15 +1841,15 @@ public class COOLParser extends Parser {
 		public IsvoidContext(IsvoidExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterIsvoid(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterIsvoid(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitIsvoid(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitIsvoid(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitIsvoid(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitIsvoid(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1889,7 +1883,7 @@ public class COOLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_notExpr; }
-
+	 
 		public NotExprContext() { }
 		public void copyFrom(NotExprContext ctx) {
 			super.copyFrom(ctx);
@@ -1903,15 +1897,15 @@ public class COOLParser extends Parser {
 		public BoolNotContext(NotExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).enterBoolNot(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).enterBoolNot(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof COOLListener) ((COOLListener)listener).exitBoolNot(this);
+			if ( listener instanceof COOLListener ) ((COOLListener)listener).exitBoolNot(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof COOLVisitor) return ((COOLVisitor<? extends T>)visitor).visitBoolNot(this);
+			if ( visitor instanceof COOLVisitor ) return ((COOLVisitor<? extends T>)visitor).visitBoolNot(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1983,7 +1977,7 @@ public class COOLParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\64\u00f8\4\2\t\2"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\65\u00f8\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+

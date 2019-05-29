@@ -1,4 +1,4 @@
-package gen;// Generated from E:/study/year4/term2/compiler/ppppp/src\COOL.g4 by ANTLR 4.7.2
+package gen;// Generated from /home/nourhan/nourhan/projects (1)/src/COOL.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
