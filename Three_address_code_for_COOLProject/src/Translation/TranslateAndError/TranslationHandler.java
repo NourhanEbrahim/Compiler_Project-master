@@ -10,11 +10,11 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 
 
-@SuppressWarnings("unused")
+
 public class TranslationHandler {
     private static BufferedWriter output_stream = new BufferedWriter(new OutputStreamWriter(System.out));
     private static int newLabel = 0;
-    private static int indentations = 0;
+    
 
     public static void translate(ParseTree tree) {
         new FeatureTranslator(tree).generate();
@@ -43,7 +43,7 @@ public class TranslationHandler {
         output_stream = new BufferedWriter(new OutputStreamWriter(s));
     }
 
-
+    //creat new label
     public static String getNewLabel() {
         newLabel++;
         return "L" + (newLabel - 1);

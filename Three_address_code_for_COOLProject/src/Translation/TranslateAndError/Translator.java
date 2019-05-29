@@ -16,6 +16,7 @@ abstract public class Translator {
     public static Queue <String> param_list = new LinkedList<String>();
     public Translator(ParseTree parseTree, Class targetClass) {
         this.parseTree = parseTree;
+        //check if this parseTree of targetClass type or not
         if (!targetClass.isInstance(parseTree)) {
             throw new RuntimeException(
                     String.format(
