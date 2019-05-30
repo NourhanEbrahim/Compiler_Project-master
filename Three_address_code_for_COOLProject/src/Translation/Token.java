@@ -1,12 +1,9 @@
 package Translation;
 
-@SuppressWarnings("ALL")
 public class Token {
     public String name;
     public String type;
-
-    public String scopeName;
-
+    //creat new Token when process declration of objectid 
     public Token(String name, String type) {
         this.name = name;
         this.type = type;
@@ -14,6 +11,6 @@ public class Token {
 
     @Override
     public String toString() {
-        return String.format("%s_%s", this.scopeName, this.name);
+        return null;
     }
 }

@@ -1,18 +1,12 @@
 package Translation;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Temp {
-
-    private static Set<Integer> taken = new HashSet<>();
-
-    public static int index = -1;
+    public static int index = 0;
 
 
     public Temp(){
+        //add new temp
         index++;
-        taken.add(index);
     }
 
 
