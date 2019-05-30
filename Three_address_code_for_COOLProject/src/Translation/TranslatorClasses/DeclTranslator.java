@@ -6,15 +6,17 @@ import Translation.TranslateAndError.TranslationHandler;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-
+//OBJECTID ':' TYPEID (ASSIGNMENT stmt)?
 public class DeclTranslator extends Translator {
 
     ParseTree parseTree;
+    //check that child of parse tree is declaration
     public DeclTranslator(ParseTree parsetree) {
         super(parsetree, COOLParser.DeclContext.class);
         parseTree =parsetree;
     }
 
+    // generate 3address code for decl
     @Override
     public String generate() {
         String idName = parseTree.getChild(0).getText();
@@ -42,12 +44,7 @@ public class DeclTranslator extends Translator {
                             exprTemp
                     )
             );
-
-
         }
-
-
-
         return null;
     }
 }
