@@ -73,8 +73,8 @@ So , How to implement this ? <br>
    **good result**
    ![61890439_362868391006499_2202922922648010752_n (1)](https://user-images.githubusercontent.com/44041416/58601765-9f3a3300-828a-11e9-90bc-1386613372ea.jpg)
   **bad result**
-  ![bad2](https://user-images.githubusercontent.com/44041416/58601871-022bca00-828b-11e9-98f8-d566d369c962.jpg)
-**2)** Scope Handler for error <br>
+  ![bad2](https://user-images.githubusercontent.com/44041416/58601871-022bca00-828b-11e9-98f8-d566d369c962.jpg) <br>
+**2)**Scope Handler for error <br>
 in this part of code we assign for each variable that appear for first time its scope <br>
 ```
 public class Scope {
