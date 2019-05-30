@@ -7,7 +7,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 public class BlockTranslator extends Translator {
 
     ParseTree parseTree;
-    //ensure that parsetree is block
+    //ensure that child of parsetree is block
     public BlockTranslator(ParseTree parsetree) {
         super(parsetree, COOLParser.BlockContext.class);
         parseTree =parsetree;
