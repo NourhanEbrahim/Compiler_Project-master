@@ -69,12 +69,47 @@ So , How to implement this ? <br>
   **We use in our project the thrid method** <br>
   
 ### Code Specification:
-
+1)Test cases good.cl and bad.cl. The first should generate code correctly and yield three address code. The second should contain an error
    **good result**
    ![61890439_362868391006499_2202922922648010752_n (1)](https://user-images.githubusercontent.com/44041416/58601765-9f3a3300-828a-11e9-90bc-1386613372ea.jpg)
   **bad result**
   ![bad2](https://user-images.githubusercontent.com/44041416/58601871-022bca00-828b-11e9-98f8-d566d369c962.jpg)
+2) Scope Handler for error
+in this part of code we assign for each variable that appear for first time its scope 
+public class Scope {
+    public Hashtable<String, Token> hashtable = new Hashtable<>();
+```
+    Scope() {
+    }
 
+    //push new token into hash table
+    void addToken(Token token) {
+        if (this.hashtable.containsKey(token.name))
+            throw new RuntimeException(
+                    String.format(
+                            "Translation.Token %s already declared in scope %s",
+                            token.name,
+                            this
+                    )
+            );
+
+        this.hashtable.put(token.name, token);
+        token.scopeName = this.toString();
+    }
+```
+
+every time new variable added we push it into scope <br>
+```
+ private static Vector<Scope> scopes =new Vector<>();
+
+    //push new scope
+    public static void pushScope() {
+
+        Scope newScope = new Scope();
+        scopes.add(scopes.size(), newScope);
+    }
+```
+So if Variable in source code doesnt exist in any scope , error appear that variable doesn't declared 
 
   
   
