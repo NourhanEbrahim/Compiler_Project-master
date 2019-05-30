@@ -62,11 +62,11 @@ Your program can take another argument which is the file to print the output of 
 First we have to know how to represent three address code for some instructions , check this document for more info :<br>
 https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/handouts/240%20TAC%20Examples.pdf?fbclid=IwAR3-QkY7RplMtEWVtp1tV7rkXMnBD_If26Yd51hMxLUzBLZ4PciqF3IlOvA <br>
 So , How to implement this ? <br>
-There are many ways : <br>
-  1- Use Antlr visitors and listeners <br>
-  2- Use the generated CST from Antlr parsers using Antlr's API.<br>
-  3- Build your CLASS TRANSALTOR then create a class for each rule in our grammer .<br>
-  We use in our project the thrid method <br>
+**There are many ways :** <br>
+  **1-** Use Antlr visitors and listeners <br>
+  **2-** Use the generated CST from Antlr parsers using Antlr's API.<br>
+  **3-** Build your CLASS TRANSALTOR then create a class for each rule in our grammer .<br>
+  **We use in our project the thrid method** <br>
 
    **good result**
    ![61890439_362868391006499_2202922922648010752_n (1)](https://user-images.githubusercontent.com/44041416/58601765-9f3a3300-828a-11e9-90bc-1386613372ea.jpg)
