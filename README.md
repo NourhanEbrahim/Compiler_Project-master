@@ -54,3 +54,5 @@ Your program can take another argument which is the file to print the output of 
   
    **good result**
    ![goodparser](https://user-images.githubusercontent.com/38635461/58598772-f8e83080-827d-11e9-84c7-53226c5f3126.jpg)
+   **bad result**
+   ![badparser](https://user-images.githubusercontent.com/38635461/58599460-ab20f780-8280-11e9-85a6-bbeaf1a59d5d.jpg)
