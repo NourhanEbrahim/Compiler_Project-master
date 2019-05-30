@@ -59,7 +59,7 @@ Your program can take another argument which is the file to print the output of 
 ## 3)Three Address Code Generation
 Three Address Code Generation:
  In this phase our goal  is to translate  source code in order to generate the equivalent three address code .
-There are many ways to implement this  :
+There are many ways to implement this  : <br>
   1- Use Antlr visitors and listeners
   2- Use the generated CST from Antlr parsers using Antlr's API.
   3- Build your CLASS TRANSALTOR then create a class for each rule in our grammer .
