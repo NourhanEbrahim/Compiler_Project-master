@@ -6,14 +6,17 @@ import Translation.TranslateAndError.TranslationHandler;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 
+//LET decl (',' decl ) * IN stmt
 public class LetStmtTranslator extends Translator {
     ParseTree parseTree;
 
+    //check that child of expression is let stmt
     public LetStmtTranslator(ParseTree parsetree) {
         super(parsetree, COOLParser.LetStmtContext.class);
         parseTree = parsetree;
     }
 
+    //generate 3address code for let stmt
     @Override
     public String generate() {
         String exprString="";
