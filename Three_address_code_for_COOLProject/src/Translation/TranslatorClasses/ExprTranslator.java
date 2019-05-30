@@ -100,7 +100,6 @@ public class ExprTranslator extends Translator {
             return  cas;
         }
 
-        //check that expr is Keyword
         else if (parseTree.getChildCount() == 1){
             char c1 = parseTree.getChild(0).getText().charAt(0);
 
