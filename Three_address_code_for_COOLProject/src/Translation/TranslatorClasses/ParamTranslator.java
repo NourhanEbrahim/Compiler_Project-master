@@ -3,8 +3,6 @@ import gen.*;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-
-// formalsList: formalsList COMMA formal | formal;
 public class ParamTranslator extends Translator {
     ParseTree parseTree ;
     public ParamTranslator(ParseTree parsetree) {
