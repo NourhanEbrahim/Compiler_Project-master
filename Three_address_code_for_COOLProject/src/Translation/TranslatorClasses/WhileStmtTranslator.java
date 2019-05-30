@@ -6,26 +6,24 @@ import Translation.TranslateAndError.TranslationHandler;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-
+//WHILE stmt LOOP stmt POOL
 public class WhileStmtTranslator extends Translator {
 
     ParseTree parseTree;
-
+    //ensure that the child of parsetree is while stmt
     public WhileStmtTranslator(ParseTree parsetree) {
-
         super(parsetree, COOLParser.WhileStmtContext.class);
         parseTree = parsetree;
     }
 
-
-
+    // generate 3address code for while 
     @Override
-
     public String generate() {
 
         String label1= TranslationHandler.getNewLabel();
         String label2 =TranslationHandler.getNewLabel();
 
+        // assign expression's value into variable        
         TranslationHandler.write(
                 String.format(
                         "%s%s : ",
