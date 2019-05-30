@@ -31,7 +31,7 @@ public class FactorTranslator  extends Translator {
 
         Temp myRes = new Temp();
 
-        // assign factor's value into variable
+        // assign expression's value into variable
         TranslationHandler.write(
                 String.format(
                         "%s%s = %s %s %s\t",
