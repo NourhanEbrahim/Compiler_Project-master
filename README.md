@@ -60,13 +60,19 @@ Your program can take another argument which is the file to print the output of 
 Three Address Code Generation:
  In this phase our goal  is to translate  source code in order to generate the equivalent three address code .
 There are many ways to implement this  :
- ##  1- Use Antlr visitors and listeners
- ## 2- Use the generated CST from Antlr parsers using Antlr's API.
- ## 3- Build your CLASS TRANSALTOR then create a class for each rule in our grammer .
+  1- Use Antlr visitors and listeners
+  2- Use the generated CST from Antlr parsers using Antlr's API.
+  3- Build your CLASS TRANSALTOR then create a class for each rule in our grammer .
   first we implement CLASS TRANSLATIONHANDLER that contain main 3 methods( write ,setstream ,getnewlabel):
   <<<<<<<<<<<<<حطى الصوره بتاعت الكلاس translationhandler>>>>>>>>
 after that we implement for each rule in grammer a TRANSLATORCLASS such as (if , while , expr)
 <<<<<<<<<<<<<حطى حبه صور من التاسكات الى عملناها هنا ....
+   **good result**
+   ![61890439_362868391006499_2202922922648010752_n (1)](https://user-images.githubusercontent.com/44041416/58601765-9f3a3300-828a-11e9-90bc-1386613372ea.jpg)
+  **bad result**
+  ![bad2](https://user-images.githubusercontent.com/44041416/58601871-022bca00-828b-11e9-98f8-d566d369c962.jpg)
+
+
   
   
   
