@@ -57,12 +57,11 @@ Your program can take another argument which is the file to print the output of 
    **bad result**
    ![badparser](https://user-images.githubusercontent.com/38635461/58599460-ab20f780-8280-11e9-85a6-bbeaf1a59d5d.jpg)
 ## 3)Three Address Code Generation
-Three Address Code Generation:
- In this phase our goal  is to translate  source code in order to generate the equivalent three address code .
+ In this phase our goal  is to translate  source code in order to generate the equivalent three address code .<br>
 There are many ways to implement this  : <br>
-  1- Use Antlr visitors and listeners
-  2- Use the generated CST from Antlr parsers using Antlr's API.
-  3- Build your CLASS TRANSALTOR then create a class for each rule in our grammer .
+  1- Use Antlr visitors and listeners <br>
+  2- Use the generated CST from Antlr parsers using Antlr's API.<br>
+  3- Build your CLASS TRANSALTOR then create a class for each rule in our grammer .<br>
   first we implement CLASS TRANSLATIONHANDLER that contain main 3 methods( write ,setstream ,getnewlabel):
 after that we implement for each rule in grammer a TRANSLATORCLASS such as (if , while , expr)
 
