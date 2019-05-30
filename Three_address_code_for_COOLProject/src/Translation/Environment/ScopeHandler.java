@@ -6,7 +6,8 @@ import java.util.Vector;
 
 public class ScopeHandler {
 
-
+    ScopeHandler (){
+    }
     private static Vector<Scope> scopes =new Vector<>();
 
     //push new scope

@@ -5,15 +5,9 @@ import Translation.Token;
 import java.util.Hashtable;
 
 public class Scope {
-    private static int nextId = 0;
-
-    public int id;
     public Hashtable<String, Token> hashtable = new Hashtable<>();
 
     Scope() {
-        this.id = nextId;
-        nextId++;
-
     }
 
     //push new token into hash table
@@ -40,11 +34,8 @@ public class Scope {
 
     @Override
     public String toString() {
-        return String.format("S%d", this.id);
+        return null;
     }
 
 
-    public static void reset() {
-        nextId = 0;
-    }
 }
