@@ -8,14 +8,17 @@ import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 import gen.COOLParser;
 
-
+// CASE stmt OF (OBJECTID ':' TYPEID CASE_ARROW stmt ';') + ESAC
 public class CaseStmtTranslator extends Translator  {
     ParseTree parseTree;
 
+    // check that child of parsetree is case stmt
     public CaseStmtTranslator(ParseTree parsetree) {
         super(parsetree, COOLParser.CaseStmtContext.class);
         parseTree = parsetree;
     }
+    
+    // generate 3address code for case
     @Override
     public String generate() {
         TranslationHandler.write(space + "Case :");
