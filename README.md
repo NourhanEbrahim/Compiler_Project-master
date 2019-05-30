@@ -51,4 +51,6 @@ When the parser starts constructing the parse tree from the start symbol and the
 Your program can take another argument which is the file to print the output of the Concrete Syntax Tree (CST) as follows: parser file.cl-lex file.cl-cst.
   Your program should determine and print any errors in the parsing tree and terminate the program.
   * Test cases good.cl and bad.cl. The first should parse correctly and yield an abstract syntax tree. The second should contain an error.
-   
+  
+   **good result**
+   ![goodparser](https://user-images.githubusercontent.com/38635461/58598772-f8e83080-827d-11e9-84c7-53226c5f3126.jpg)
