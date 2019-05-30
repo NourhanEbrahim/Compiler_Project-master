@@ -6,23 +6,27 @@ import Translation.TranslateAndError.TranslationHandler;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 import gen.COOLParser;
+
+//IF stmt THEN stmt (ELSE stmt)? FI
 public class ifStmtTranslator extends Translator {
 
     ParseTree parseTree;
-
+    //ensure that the child of parsetree is ifstmt
     public ifStmtTranslator(ParseTree parsetree) {
         super(parsetree, COOLParser.IfStmtContext.class);
         parseTree =parsetree;
     }
 
+    // generate 3address code for ifstmt
     @Override
     public String generate() {
         Temp res = new Temp();
+        // push the scope of if
         ScopeHandler.pushScope();
         String elseLabel = TranslationHandler.getNewLabel();
 
-
         String child1 = new stmtTranslator(parseTree.getChild(1)).generate();
+        // assign expression's value into variable
         TranslationHandler.write(
                 String.format(
                         "%sIFFALSE %s GOTO %s",
@@ -38,6 +42,7 @@ public class ifStmtTranslator extends Translator {
                         res.toString(),
                         child2));
 
+        //check that there is else
         if(parseTree.getChildCount() > 5) {
             String afterLabel = TranslationHandler.getNewLabel();
             TranslationHandler.write(
