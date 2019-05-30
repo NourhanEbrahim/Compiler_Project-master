@@ -6,14 +6,17 @@ import Translation.TranslateAndError.TranslationHandler;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 
+// OBJECTID '(' param? ')' ':' TYPEID '{' stmt '}' ';'
 public class FunctionTranslator extends Translator {
     ParseTree parseTree;
 
+    //check that child of expression is function
     public FunctionTranslator(ParseTree parsetree) {
         super(parsetree, COOLParser.FunctionContext.class);
         parseTree =parsetree;
     }
 
+    //generate 3address code for function
     @Override
     public String generate() {
 
