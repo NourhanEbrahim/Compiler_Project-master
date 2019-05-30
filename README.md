@@ -110,7 +110,7 @@ Every time new variable added we push it into new scope <br>
         scopes.add(scopes.size(), newScope);
     }
 ```
-So if Variable in source code doesnt exist in any scope , error appear that variable doesn't declared <br> <br>
+So if Variable in source code doesn't exist in any scope , Error appear that variable doesn't declared . <br> <br>
 ![61504600_2376263755939957_4104285574284705792_n](https://user-images.githubusercontent.com/44041416/58603263-54bbb500-8290-11e9-9b66-b41a104ea1f8.jpg)
 
 
