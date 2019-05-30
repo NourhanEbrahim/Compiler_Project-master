@@ -5,15 +5,18 @@ import Translation.TranslateAndError.TranslationHandler;
 import Translation.TranslateAndError.Translator;
 import org.antlr.v4.runtime.tree.ParseTree;
 
+//OBJECTID ASSIGNMENT stmt
 public class AssigmentstmtTranslator extends Translator {
 
     ParseTree parseTree;
 
+    //check that child of expression is assignmentstmt
     public AssigmentstmtTranslator(ParseTree parsetree) {
         super(parsetree, COOLParser.AssigmentstmtContext.class);
         parseTree = parsetree;
     }
 
+    //generate 3address code for assignmentstmt
     public String generate() {
         String exprString ="", termString;
         char c1 = parseTree.getChild(0).getText().charAt(0);
@@ -35,12 +38,11 @@ public class AssigmentstmtTranslator extends Translator {
 
         if (parseTree.getChild(0).getChildCount() == 0)exprString =  parseTree.getChild(0).getText();
 
-        //else  exprString = new ExprTranslator(parseTree.getChild(0)).generate();
-
         if(parseTree.getChild(2).getChildCount() == 0) termString =  parseTree.getChild(2).getText();
         else termString = new stmtTranslator(parseTree.getChild(2)).generate();
 
 
+        // assign expression's value into variable
         TranslationHandler.write(
                 String.format(
                         "%s%s = %s\t",
